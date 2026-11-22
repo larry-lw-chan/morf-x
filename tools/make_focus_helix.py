@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build web/focus-helix.json: what MORF-X needs to work with a Helix (and the HX family).
+"""Build web/app/focus-helix.json: what MORF-X needs to work with a Helix (and the HX family).
 
   models: {Helix model number: [symbol, parameter order]} for every model in HX Edit's Helix.sym, so
           MORF-X names any block on the unit and maps parameters by name.
@@ -15,7 +15,7 @@ import glob, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from focus_extras import KEYS, SKIP, OURS, QUANTIZE  # noqa: E402
 
-HERE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'web')
+HERE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'web', 'app')
 
 
 def category_of(path):

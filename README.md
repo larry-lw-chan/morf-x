@@ -4,7 +4,8 @@ Blend one block on your Line 6 unit between five tones on an X-Y pad, live over 
 parameter of the block moves with it: knobs blend, switches change at the halfway point, and a short glide turns a
 fast move into a smooth sweep. Every model starts with five ready-made tones, and you can make and save your own.
 
-**Use it in the browser** (Chrome or Edge on a computer): https://tavishrox.github.io/morf-x/
+**Home page, with all the downloads:** https://tavishrox.github.io/morf-x/
+**Use it in the browser** (Chrome or Edge on a computer): https://tavishrox.github.io/morf-x/app/
 **Or download the app** for Mac, Windows or Linux from [Releases](https://github.com/tavishrox/morf-x/releases).
 
 ## Works with
@@ -38,16 +39,20 @@ Close POD Go Edit or HX Edit first: only one program can talk to the unit at a t
 
 Not sure which Mac you have? Apple menu › About This Mac: "Chip" means Apple Silicon, "Processor" means Intel.
 
+## The website
+
+`web/index.html` is the home page and `web/app/` is MORF-X itself; GitHub Pages publishes `web/` on every push.
+
 ## Building
 
     cd app
     npm ci
-    npm start              # run from source (copies ../web in first)
+    npm start              # run from source (copies ../web/app in first)
     npm run pack-all       # Mac (arm64, x64), Windows (x64), Linux (x64, arm64), then the zips in app/dist
 
 `MORFX_SELFTEST=1 npx electron .` connects, prints what MORF-X finds and quits (reads only).
 
-The tone data (`web/focus-defaults.json`, `web/focus-helix.json`) is made by `tools/focus_extras.py` and
+The tone data (`web/app/focus-defaults.json`, `web/app/focus-helix.json`) is made by `tools/focus_extras.py` and
 `tools/make_focus_helix.py` from Line 6's Focus View presets and the model lists in your own POD Go Edit / HX Edit
 install.
 

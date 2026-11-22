@@ -1,10 +1,10 @@
 #!/bin/sh
-# Make res/MORF-X.icns (Mac), res/MORF-X.png (window icon) from the MORF-X mark (web/morf-x-icon.svg).
+# Make res/MORF-X.icns (Mac), res/MORF-X.png (window icon) from the MORF-X mark (web/app/morf-x-icon.svg).
 # Draws it with headless Chrome on a transparent 1024 px canvas, inside the Mac icon grid (824 px).
 set -e
 cd "$(dirname "$0")"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-SVG="$(cd ../web && pwd)/morf-x-icon.svg"
+SVG="$(cd ../web/app && pwd)/morf-x-icon.svg"
 mkdir -p res/iconset
 cat > res/iconset/icon.html <<HTML
 <!doctype html><html><body style="margin:0;background:transparent">

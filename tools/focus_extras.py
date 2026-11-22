@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add MORF-X tone sets to web/focus-defaults.json for POD Go models that had none.
+"""Add MORF-X tone sets to web/app/focus-defaults.json for POD Go models that had none.
 
 Two sources:
   1. Line 6 Focus View files whose names differ from the POD Go symbol (no HD2_ prefix, VIC_/Victoria_/L6SPB_
@@ -147,7 +147,7 @@ OURS = [   # (symbol pattern, model name, category, maker)
 ]
 
 
-def main(res, sym_path, out='web/focus-defaults.json'):
+def main(res, sym_path, out='web/app/focus-defaults.json'):
     sym = json.load(open(sym_path))
     doc = json.load(open(out))
     sets = doc['sets']
