@@ -1,0 +1,4 @@
+# MORF-X: let the logged-in user talk to Line 6 units (vendor 0e41) over USB, as POD Go Edit / HX Edit would.
+# Install: sudo cp 99-morf-x.rules /etc/udev/rules.d/ && sudo udevadm control --reload && sudo udevadm trigger
+# then unplug the unit and plug it in again.
+SUBSYSTEM=="usb", ATTR{idVendor}=="0e41", MODE="0660", TAG+="uaccess"
